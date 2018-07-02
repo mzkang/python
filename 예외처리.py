@@ -27,3 +27,5 @@ else:
         elif i % j == 0 :
             print('{} x {} = {}\n이 숫자는 소수가 아닙니다.'.format(j, int(i/j), i))
             break
+    else:
+        print('이 숫자는 소수입니다.')
