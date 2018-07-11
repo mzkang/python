@@ -230,6 +230,21 @@ def sort_by_word_length_lc(words):
     return [w for length, w in t]
 
 
+ #------------딕셔너리로-----------   
+#
+def sort_by_word_length(words):
+    t = {}
+    for w in words :
+        t[w] = len(w)
+
+    sorted_word = []  
+    t = t.items()  # 딕셔너리의 value로 정렬하려면 items로 분해 후에 할 것!
+    t = sorted(t, key = lambda e : (e[1],e[0]), reverse = True)
+                  # value, key 순서대로 내림차순 정렬
+    for w, length in t :
+        sorted_word.append(w)
+    return sorted_word
+
 
 
 
